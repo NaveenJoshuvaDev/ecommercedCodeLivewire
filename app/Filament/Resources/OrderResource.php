@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\OrderResource\Pages;
 use App\Filament\Resources\OrderResource\RelationManagers;
+use App\Filament\Resources\OrderResource\RelationManagers\AddressRelationManager;
 use App\Models\Order;
 use App\Models\Product;
 
@@ -261,6 +262,7 @@ class OrderResource extends Resource
     {
         return [
             //
+            AddressRelationManager::class
         ];
     }
     public static function getNavigationBadge(): ?string
